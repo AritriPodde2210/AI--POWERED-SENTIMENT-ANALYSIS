@@ -1,38 +1,29 @@
 ## Installation
 
-Follow these steps to set up and run the backend API locally.
-
 ### Prerequisites
 
--   Python 3.10 or higher
--   `pip` (Python package manager)
+-   **Node.js** (v22 or higher)
+-   **npm** (Node Package Manager)
 
 ### Step 1: Install dependencies
 
-Once the virtual environment is set up, install the required dependencies listed in `requirements.txt`:
+Navigate to the `sentiment-frontend` directory (if you have a separate directory for frontend) and install the required dependencies:
 
 ```bash
-pip install -r requirements.txt
+npm install
 ```
 
-### Step 2: Start the FastAPI server
+This will install all the necessary dependencies listed in `package.json`.
 
-Once the dependencies are installed, you can start the FastAPI server using Uvicorn. Run the following command:
+### Step 2: Start the React development server
+
+Once the dependencies are installed, you can start the React development server with the following command:
 
 ```bash
-uvicorn app.main:app --reload
+npm run dev
 ```
 
--   **`app.main:app`**: Refers to the FastAPI instance defined in `main.py` (inside the `app` folder).
--   **`--reload`**: Enables auto-reloading during development.
-
-The server will start, and you can access the API at `http://127.0.0.1:8000`.
+This will run the React application in development mode. By default, it will be accessible at `http://localhost:5173` in your browser.
 
 
-## API Endpoints
 
-### 1. **POST /analyze-csv/**
-
--   **Description**: Upload a CSV file containing text data, and the API will return sentiment analysis results.
--   **Request Body**: A `multipart/form-data` request containing the CSV file.
--   **Response**: JSON object containing sentiment results.
